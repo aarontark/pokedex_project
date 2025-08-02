@@ -39,3 +39,75 @@ body {
     gap: 2rem;
     text-align: center;
 }
+
+.grass {
+    background-color: --grass;
+}
+
+.bug {
+    background-color: --bug;
+}
+
+.dark {
+    background-color: --dark;
+}
+
+.dragon {
+    background-color: --dragon;
+}
+
+.electric {
+    background-color: --electric;
+}
+
+.fairy {
+    background-color: --fairy;
+}
+
+.fighting {
+    background-color: --fighting;
+}
+
+.fire {
+    background-color: --fire;
+}
+
+.flying {
+    background-color: --flying;
+}
+
+.ghost {
+    background-color: --ghost;
+}
+
+.ground {
+    background-color: --ground;
+}
+
+.ice {
+    background-color: --ice;
+}
+
+.normal {
+    background-color: --normal;
+}
+
+.poison {
+    background-color: --poison;
+}
+
+.psychic {
+    background-color: --psychic;
+}
+
+.rock {
+    background-color: --rock;
+}
+
+.steel {
+    background-color: --steel;
+}
+
+.water {
+    background-color: --water;
+}
