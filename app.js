@@ -10,7 +10,7 @@ async function fetchPokeData(region) {
                                     <img class="pokeball-img" src="./icons/pokeball.svg" alt="">
                                 </div>
                                 <p class="pokedex-index">${pokeData.id}</p>
-                                <h3 class="pokemon-name">${pokeData.name}</h3>
+                                <h3 class="pokemon-name">${pokeData.name.toUpperCase()}</h3>
                                 <div class="pokemon-type-container"></div>
                             </div>`;
         cardContainer.innerHTML += pokemonCard;
