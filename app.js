@@ -3,6 +3,7 @@ const types = ['fire', 'grass', 'electric', 'water', 'ground', 'rock', 'fairy', 
 
 // separate fetching data and creating html in two separate functions later
 async function fetchPokeData(region) {
+    let pokemonTypesID = 1;
     for(i=region[0]; i <= region[1]; i++) {
         let pokeDataRaw = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`);
         let pokeData = await pokeDataRaw.json();
@@ -14,11 +15,17 @@ async function fetchPokeData(region) {
                                     <img class="pokemon-sprite" src="${pokeData.sprites.front_default}" alt="">
                                     <img class="pokeball-img" src="./icons/pokeball.svg" alt="">
                                 </div>
-                                <p class="pokedex-index">${pokeData.id}</p>
+                                <p class="pokedex-index">#${pokeData.id}</p>
                                 <h3 class="pokemon-name">${pokeData.name.toUpperCase()}</h3>
-                                <div class="pokemon-type-container"></div>
+                                <div id="pokemon-types-${pokemonTypesID}" class="pokemon-type-container"></div>
                             </div>`;
         cardContainer.innerHTML += pokemonCard;
+        const pokeTypesContainer = document.querySelector(`#pokemon-types-${pokemonTypesID}`);
+        for (element of pokeTypes) {
+            const pokeType = `<img class="pokemon-type ${element}-type" src="./icons/${element}.svg"></img>`
+            pokeTypesContainer.innerHTML += pokeType;
+        }
+        pokemonTypesID++;
     }
 }
 
