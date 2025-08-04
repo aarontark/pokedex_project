@@ -34,10 +34,68 @@ body {
 }
 
 .cards-display {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
     text-align: center;
+    width: 95%;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    width: 12rem;
+    padding-block: 1rem;
+    gap: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.pokemon-sprite {
+    width: 9rem;
+    z-index: 1;
+    position: absolute;
+}
+
+.pokeball-img {
+    width: 9rem;
+    opacity: .5;
+    animation: spin 3s infinite linear;
+}
+
+.pokedex-index {
+    font-size: 1.75rem;
+    font-weight: bold;
+    background-color: #00000027;
+    padding: .25rem 2rem;
+    border-radius: .25rem;
+}
+
+.pokemon-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.pokemon-type-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pokemon-type {
+    width: 2rem;
 }
 
 .grass {
@@ -110,4 +168,14 @@ body {
 
 .water {
     background-color: var(--water);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
