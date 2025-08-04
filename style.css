@@ -17,6 +17,24 @@
     --rock: #a38c21;
     --steel: #5695a3;
     --water: #539ddf;
+    --fire-card: #e03a3a;
+    --grass-card: #50C878;
+    --electric-card: #fad343;
+    --water-card: #1E90FF;
+    --ground-card: #735139;
+    --rock-card: #63594f;
+    --fairy-card: #EE99AC;
+    --poison-card: #b34fb3;
+    --bug-card: #A8B820;
+    --dragon-card: #fc883a;
+    --psychic-card: #882eff;
+    --flying-card: #87CEEB;
+    --fighting-card: #bf5858;
+    --normal-card: #D2B48C;
+    --ghost-card: #7B62A3;
+    --dark-card: #414063;
+    --steel-card: #808080;
+    --ice-card: #98D8D8;
 }
 
 * {
@@ -99,75 +117,75 @@ body {
 }
 
 .grass {
-    background-color: var(--grass);
+    background-color: var(--grass-card);
 }
 
 .bug {
-    background-color: var(--bug);
+    background-color: var(--bug-card);
 }
 
 .dark {
-    background-color: var(--dark);
+    background-color: var(--dark-card);
 }
 
 .dragon {
-    background-color: var(--dragon);
+    background-color: var(--dragon-card);
 }
 
 .electric {
-    background-color: var(--electric);
+    background-color: var(--electric-card);
 }
 
 .fairy {
-    background-color: var(--fairy);
+    background-color: var(--fairy-card);
 }
 
 .fighting {
-    background-color: var(--fighting);
+    background-color: var(--fighting-card);
 }
 
 .fire {
-    background-color: var(--fire);
+    background-color: var(--fire-card);
 }
 
 .flying {
-    background-color: var(--flying);
+    background-color: var(--flying-card);
 }
 
 .ghost {
-    background-color: var(--ghost);
+    background-color: var(--ghost-card);
 }
 
 .ground {
-    background-color: var(--ground);
+    background-color: var(--ground-card);
 }
 
 .ice {
-    background-color: var(--ice);
+    background-color: var(--ice-card);
 }
 
 .normal {
-    background-color: var(--normal);
+    background-color: var(--normal-card);
 }
 
 .poison {
-    background-color: var(--poison);
+    background-color: var(--poison-card);
 }
 
 .psychic {
-    background-color: var(--psychic);
+    background-color: var(--psychic-card);
 }
 
 .rock {
-    background-color: var(--rock);
+    background-color: var(--rock-card);
 }
 
 .steel {
-    background-color: var(--steel);
+    background-color: var(--steel-card);
 }
 
 .water {
-    background-color: var(--water);
+    background-color: var(--water-card);
 }
 
 @keyframes spin {
