@@ -55,7 +55,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: .5rem;
+    gap: 1.25rem;
     text-align: center;
     width: 95%;
 }
@@ -70,6 +70,7 @@ body {
     gap: 1rem;
     border-radius: 1rem;
     cursor: pointer;
+    box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.5);
 }
 
 .img-container {
@@ -113,79 +114,171 @@ body {
 }
 
 .pokemon-type {
-    width: 2rem;
+    width: 2.5rem;
+    padding: .5rem;
+    border-radius: 50%;
 }
 
 .grass {
     background-color: var(--grass-card);
 }
 
+.grass-type {
+    background-color: var(--grass);
+    box-shadow: 0px 0px 14px 0px var(--grass);
+}
+
 .bug {
     background-color: var(--bug-card);
+}
+
+.bug-type {
+    background-color: var(--bug);
+    box-shadow: 0px 0px 14px 0px var(--bug);
 }
 
 .dark {
     background-color: var(--dark-card);
 }
 
+.dark-type {
+    background-color: var(--dark);
+    box-shadow: 0px 0px 14px 0px var(--dark);
+}
+
 .dragon {
     background-color: var(--dragon-card);
+}
+
+.dragon-type {
+    background-color: var(--dragon);
+    box-shadow: 0px 0px 14px 0px var(--dragon);
 }
 
 .electric {
     background-color: var(--electric-card);
 }
 
+.electric-type {
+    background-color: var(--electric);
+    box-shadow: 0px 0px 14px 0px var(--electric);
+}
+
 .fairy {
     background-color: var(--fairy-card);
+}
+
+.fairy-type {
+    background-color: var(--fairy);
+    box-shadow: 0px 0px 14px 0px var(--fairy);
 }
 
 .fighting {
     background-color: var(--fighting-card);
 }
 
+.fighting-type {
+    background-color: var(--fighting);
+    box-shadow: 0px 0px 14px 0px var(--fighting);
+}
+
 .fire {
     background-color: var(--fire-card);
+}
+
+.fire-type {
+    background-color: var(--fire);
+    box-shadow: 0px 0px 14px 0px var(--fire);
 }
 
 .flying {
     background-color: var(--flying-card);
 }
 
+.flying-type {
+    background-color: var(--flying);
+    box-shadow: 0px 0px 14px 0px var(--flying);
+}
+
 .ghost {
     background-color: var(--ghost-card);
 }
 
+.ghost-type {
+    background-color: var(--ghost);
+    box-shadow: 0px 0px 14px 0px var(--ghost);
+}
+
 .ground {
-    background-color: var(--ground-card);
+    background: var(--ground-card);
+}
+
+.ground-type {
+    background-color: var(--ground);
+    box-shadow: 0px 0px 14px 0px var(--ground);
 }
 
 .ice {
     background-color: var(--ice-card);
 }
 
+.ice-type {
+    background-color: var(--ice);
+    box-shadow: 0px 0px 14px 0px var(--ice);
+}
+
 .normal {
     background-color: var(--normal-card);
+}
+
+.normal-type {
+    background-color: var(--normal);
+    box-shadow: 0px 0px 14px 0px var(--normal);
 }
 
 .poison {
     background-color: var(--poison-card);
 }
 
+.poison-type {
+    background-color: var(--poison);
+    box-shadow: 0px 0px 14px 0px var(--poison);
+}
+
 .psychic {
     background-color: var(--psychic-card);
+}
+
+.psychic-type {
+    background-color: var(--psychic);
+    box-shadow: 0px 0px 14px 0px var(--psychic);
 }
 
 .rock {
     background-color: var(--rock-card);
 }
 
+.rock-type {
+    background-color: var(--rock);
+    box-shadow: 0px 0px 14px 0px var(--rock);
+}
+
 .steel {
     background-color: var(--steel-card);
 }
 
+.steel-type {
+    background-color: var(--steel);
+    box-shadow: 0px 0px 14px 0px var(--steel);
+}
+
 .water {
     background-color: var(--water-card);
+}
+
+.water-type {
+    background-color: var(--water);
+    box-shadow: 0px 0px 14px 0px var(--water);
 }
 
 @keyframes spin {
