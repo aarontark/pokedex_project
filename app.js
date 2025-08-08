@@ -10,15 +10,16 @@ async function fetchPokeData(region) {
         // pokemonTypes = (pokeData.types[pokeData.types.length - 1].type.name);
         const pokeTypes = pokeData.types.map((type) => type.type.name);
         const type = types.find((element) => pokeTypes.includes(element));
-        const pokemonCard = `<div class="card-container ${type}">
-                                <div class="img-container">
-                                    <img class="pokemon-sprite" src="${pokeData.sprites.front_default}" alt="">
-                                    <img class="pokeball-img" src="./icons/pokeball.svg" alt="">
-                                </div>
-                                <p class="pokedex-index">#${pokeData.id}</p>
-                                <h3 class="pokemon-name">${pokeData.name.toUpperCase()}</h3>
-                                <div id="pokemon-types-${pokemonTypesID}" class="pokemon-type-container"></div>
-                            </div>`;
+        const pokemonCard = 
+        `<div class="card-container ${type}">
+            <div class="img-container">
+                <img class="pokemon-sprite" src="${pokeData.sprites.front_default}" alt="">
+                <img class="pokeball-img" src="./icons/pokeball.svg" alt="">
+            </div>
+            <p class="pokedex-index">#${pokeData.id}</p>
+            <h3 class="pokemon-name">${pokeData.name.toUpperCase()}</h3>
+            <div id="pokemon-types-${pokemonTypesID}" class="pokemon-type-container"></div>
+        </div>`;
         cardContainer.innerHTML += pokemonCard;
         const pokeTypesContainer = document.querySelector(`#pokemon-types-${pokemonTypesID}`);
         for (element of pokeTypes) {
