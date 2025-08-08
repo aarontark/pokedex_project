@@ -99,7 +99,7 @@ body {
 }
 
 .pokeball-img {
-    width: 9rem;
+    width: 9.5rem;
     opacity: .5;
     animation: spin 3s infinite linear;
 }
@@ -116,7 +116,7 @@ body {
 .pokemon-name {
     font-size: 1.6rem;
     letter-spacing: .25rem;
-    color: #000000a4;
+    color: #000000cf;
 }
 
 .pokemon-type-container {
@@ -301,5 +301,38 @@ body {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media(min-width: 768px) {
+    .card-container {
+        width: 13rem;
+    }
+}
+
+@media(min-width: 1400px) {
+    .card-container {
+        width: 19.75rem;
+        padding-block: 2rem;
+    }
+
+    .pokeball-img {
+        width: 15rem;
+    }
+
+    .pokemon-sprite {
+        width: 14rem;
+    }
+
+    .pokedex-index {
+       font-size: 1.75rem;
+    }
+
+    .pokemon-name {
+        font-size: 2.75rem;
+    }
+
+    .pokemon-type {
+        width: 3.25rem;
     }
 }
