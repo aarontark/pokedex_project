@@ -67,8 +67,37 @@ body {
     min-height: 100vh;
 }
 
-.region-btns {
+.loading-container {
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.loading-icon {
+    padding: 3em;
+    border-radius: 50%;
+    border-right: 3px solid #ffffff;
+    border-left: 3px solid #000000a7;
+    border-bottom: 3px solid #000000a7;
+    border-top: 3px solid #000000a7;
+    animation: spin 1s ease-in-out infinite;
+}
+
+.loading-text {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'PocketMonk';
+    letter-spacing: .15rem;
+    position: relative;
+    left: 10px;
+}
+
+.region-btns {
+    display: none;
     gap: .5rem;
     max-width: 90%;
     overflow: scroll;
@@ -93,7 +122,7 @@ body {
 }
 
 .cards-display {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.25rem;
