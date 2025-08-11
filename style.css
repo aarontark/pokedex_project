@@ -148,6 +148,13 @@ body {
     font-family: "PocketMonk";
 }
 
+.front-side, .back-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
 .img-container {
     display: flex;
     justify-content: center;

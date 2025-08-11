@@ -7,17 +7,37 @@ const regions = [[1, 151], [152, 251], [252, 386], [387, 493], [494, 649], [650,
 
 
 const renderData = (pokeData, pokemonTypesID) => {
+    console.log(pokeData);
     const pokeTypes = pokeData.types.map((type) => type.type.name);
     const type = types.find((element) => pokeTypes.includes(element));
     const pokemonCard = 
     `<div class="card-container ${type}">
-        <div class="img-container">
-            <img class="pokemon-sprite" src="${pokeData.sprites.front_default}" alt="">
-            <img class="pokeball-img" src="./icons/pokeball.svg" alt="">
+        <div class="front-side">
+            <div class="img-container">
+                <img class="pokemon-sprite" src="${pokeData.sprites.front_default}" alt="">
+                <img class="pokeball-img" src="./icons/pokeball.svg" alt="">
+            </div>
+            <p class="pokedex-index">#${pokeData.id}</p>
+            <h3 class="pokemon-name">${pokeData.name.toUpperCase()}</h3>
+            <div id="pokemon-types-${pokemonTypesID}" class="pokemon-type-container"></div>
         </div>
-        <p class="pokedex-index">#${pokeData.id}</p>
-        <h3 class="pokemon-name">${pokeData.name.toUpperCase()}</h3>
-        <div id="pokemon-types-${pokemonTypesID}" class="pokemon-type-container"></div>
+        <div class="back-side">
+            <div class="img-container">
+                <img class="pokemon-sprite" src="${pokeData.sprites.back_default}" alt="">
+                <img class="pokeball-img" src="./icons/pokeball.svg" alt="">
+            </div>
+            <p class="pokedex-index">#${pokeData.id}</p>
+            <div class="physical-properties">
+                <div class="weight-display">
+                    <p class="weight-title">WEIGHT:</p>
+                    <p class="weight-data">
+                </div>
+                <div class="height-display">
+                    <p class="height-title">HEIGHT:</p>
+                    <p class="height-data">
+                </div>
+            </div>
+        </div>
     </div>`;
     cardContainer.innerHTML += pokemonCard;
     const pokeTypesContainer = document.querySelector(`#pokemon-types-${pokemonTypesID}`);
