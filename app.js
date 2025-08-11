@@ -5,7 +5,6 @@ const types = ['fire', 'grass', 'electric', 'water', 'ground', 'rock', 'fairy', 
 const regionBtns = Array.from(document.querySelector('.region-btns').children);
 const regions = [[1, 151], [152, 251], [252, 386], [387, 493], [494, 649], [650, 721], [722, 809], [810, 905], [906, 1025]];
 
-
 const renderData = (pokeData, pokemonTypesID) => {
     console.log(pokeData);
     const pokeTypes = pokeData.types.map((type) => type.type.name);
@@ -30,11 +29,11 @@ const renderData = (pokeData, pokemonTypesID) => {
             <div class="physical-properties">
                 <div class="weight-display">
                     <p class="weight-title">WEIGHT:</p>
-                    <p class="weight-data">
+                    <p class="weight-data">${pokeData.weight / 10}KG</p>
                 </div>
                 <div class="height-display">
                     <p class="height-title">HEIGHT:</p>
-                    <p class="height-data">
+                    <p class="height-data">${pokeData.height / 10}M</p>
                 </div>
             </div>
         </div>
