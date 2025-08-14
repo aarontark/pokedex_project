@@ -20,6 +20,12 @@ const nameShave = (pokeName) => {
 const renderData = (pokeData, pokemonTypesID) => {
     const pokeTypes = pokeData.types.map((type) => type.type.name);
     const type = types.find((element) => pokeTypes.includes(element));
+    let pokeBackSprite;
+    if (pokeData.sprites.back_default == null) {
+        pokeBackSprite = pokeData.sprites.front_default;
+    } else {
+        pokeBackSprite = pokeData.sprites.back_default;
+    }
     const pokemonCard = 
     `<div class="card-container ${type}">
         <div class="front-side">
@@ -33,7 +39,7 @@ const renderData = (pokeData, pokemonTypesID) => {
         </div>
         <div class="back-side">
             <div class="img-container">
-                <img class="pokemon-sprite" src="${pokeData.sprites.back_default}" alt="">
+                <img class="pokemon-sprite" src="${pokeBackSprite}" alt="">
                 <img class="pokeball-img" src="./icons/pokeball.svg" alt="">
             </div>
             <p class="pokedex-index">#${pokeData.id}</p>
