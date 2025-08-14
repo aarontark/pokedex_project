@@ -6,6 +6,17 @@ const regionBtns = Array.from(document.querySelector('.region-btns').children);
 const regions = [[1, 151], [152, 251], [252, 386], [387, 493], [494, 649], [650, 721], [722, 809], [810, 905], [906, 1025]];
 let activeRegion;
 
+const nameShave = (pokeName) => {
+    newName = '';
+    for (element of pokeName) {
+        if (element == '-') {
+            break;
+        }
+        newName += element;
+    }
+    return newName.toUpperCase();
+}
+
 const renderData = (pokeData, pokemonTypesID) => {
     const pokeTypes = pokeData.types.map((type) => type.type.name);
     const type = types.find((element) => pokeTypes.includes(element));
@@ -17,7 +28,7 @@ const renderData = (pokeData, pokemonTypesID) => {
                 <img class="pokeball-img" src="./icons/pokeball.svg" alt="">
             </div>
             <p class="pokedex-index">#${pokeData.id}</p>
-            <h3 class="pokemon-name">${pokeData.name.toUpperCase()}</h3>
+            <h3 class="pokemon-name">${nameShave(pokeData.name)}</h3>
             <div id="pokemon-types-${pokemonTypesID}" class="pokemon-type-container"></div>
         </div>
         <div class="back-side">
