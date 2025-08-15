@@ -1,8 +1,9 @@
 const cardContainer = document.querySelector('.cards-display');
 const regionBtnsContainer = document.querySelector('.region-btns');
 const loadingContainer = document.querySelector('.loading-container');
-const types = ['fire', 'grass', 'electric', 'water', 'ground', 'rock', 'fairy', 'poison', 'bug', 'dragon', 'psychic', 'flying', 'fighting', 'normal', 'ghost', 'dark', 'steel', 'ice']
 const regionBtns = Array.from(document.querySelector('.region-btns').children);
+const navbar = document.querySelector('.navbar');
+const types = ['fire', 'grass', 'electric', 'water', 'ground', 'rock', 'fairy', 'poison', 'bug', 'dragon', 'psychic', 'flying', 'fighting', 'normal', 'ghost', 'dark', 'steel', 'ice']
 const regions = [[1, 151], [152, 251], [252, 386], [387, 493], [494, 649], [650, 721], [722, 809], [810, 905], [906, 1025]];
 let activeRegion;
 
@@ -71,6 +72,7 @@ async function fetchPokeData(region) {
     activeRegion = region;
     cardContainer.style.display = 'none';
     regionBtnsContainer.style.display = 'none';
+    navbar.style.display = 'none';
     loadingContainer.style.display = 'flex';
     cardContainer.innerHTML = '';
     let pokemonTypesID = region[0]
@@ -82,6 +84,7 @@ async function fetchPokeData(region) {
     }
     cardContainer.style.display = 'flex';
     regionBtnsContainer.style.display = 'flex';
+    navbar.style.display = 'flex';
     loadingContainer.style.display = 'none';
 }
 
