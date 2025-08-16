@@ -3,6 +3,7 @@ const regionBtnsContainer = document.querySelector('.region-btns');
 const loadingContainer = document.querySelector('.loading-container');
 const regionBtns = Array.from(document.querySelector('.region-btns').children);
 const navbar = document.querySelector('.navbar');
+const pokeSearch = document.querySelector('.pokemon-search');
 const types = ['fire', 'grass', 'electric', 'water', 'ground', 'rock', 'fairy', 'poison', 'bug', 'dragon', 'psychic', 'flying', 'fighting', 'normal', 'ghost', 'dark', 'steel', 'ice']
 const regions = [[1, 151], [152, 251], [252, 386], [387, 493], [494, 649], [650, 721], [722, 809], [810, 905], [906, 1025]];
 let activeRegion;
@@ -87,6 +88,24 @@ async function fetchPokeData(region) {
     navbar.style.display = 'flex';
     loadingContainer.style.display = 'none';
 }
+
+pokeSearch.addEventListener('input', (event) => {
+    const pokemonCardList = cardContainer.children;
+    if (event.target.value == '') {
+        for (element of pokemonCardList) {
+            element.style.display = 'flex';
+        }
+    } else {
+        for (element of pokemonCardList) {
+            frontFace = element.children[0];
+            pokemonName = frontFace.children[2];
+            if (!pokemonName.innerHTML.includes(event.target.value.toUpperCase())) {
+                element.style.display = 'none';
+                console.log(pokemonName.innerHTML);
+            }
+        }
+    }
+})
 
 for (let i = 0; i < regions.length; i++) {
     regionBtns[i].addEventListener('click', () => {
