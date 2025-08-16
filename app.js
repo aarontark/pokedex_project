@@ -66,10 +66,17 @@ const renderData = (pokeData, pokemonTypesID) => {
 }
 
 // separate fetching data and creating html in two separate functions later
-async function fetchPokeData(region) {
+async function fetchPokeData(region, regionBtn) {
     if (activeRegion == region) {
         return;    
     }
+    for (element of regionBtns) {
+        if (element.classList.contains('active-region')) {
+            element.classList.remove('active-region');
+            break;
+        }
+    }
+    regionBtn.classList.add('active-region');
     activeRegion = region;
     cardContainer.style.display = 'none';
     regionBtnsContainer.style.display = 'none';
@@ -109,11 +116,12 @@ pokeSearch.addEventListener('input', (event) => {
 
 for (let i = 0; i < regions.length; i++) {
     regionBtns[i].addEventListener('click', () => {
-        fetchPokeData(regions[i]);
+        fetchPokeData(regions[i], regionBtns[i]);
     })
 }
 
-fetchPokeData(regions[0]);
+fetchPokeData(regions[0], regionBtns[0]);
+regionBtns[0].classList.add('active-region');
 /*
 
 <div class="card-container">
